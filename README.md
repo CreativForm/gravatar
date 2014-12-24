@@ -14,8 +14,8 @@ Gravatar use your email address to recognize unique avatar. Like default you can
 	$gravatar->image($image_size);		// Return image url
 	$gravatar->QRcode($image_size);	    // Return QR Code url
 	$gravatar->vCard();	    	// Return VCF/vCard
-	$gravatar->json(); 	    	// return objects
-	$gravatar->xml(); 			// return xml data
+	$gravatar->json(); 	    	// Return objects
+	$gravatar->xml(); 			// Return xml data
 
 SETUP AND LOAD YOUR GRAVATAR
 ========
