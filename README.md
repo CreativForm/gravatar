@@ -41,10 +41,11 @@ GET JSON
 ========
 If you whant to use all data from your gravatar profile you can use json() to make objects and you can handle with it.
 
-    $gravatar->json();
+    $json=$gravatar->json();
+    echo $json->profileUrl;
     
 GET XML
 ========
 If you whant to use all data from your gravatar profile using XML, this is easy.
 
-    $gravatar->xml();
+    echo $gravatar->xml();
