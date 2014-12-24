@@ -3,7 +3,7 @@ GET CONTENT FROM GRAVATAR
 
 This is specially created PHP class for Gravatar API. This class provides secure data access for www.Gravatar.com.
 This class can be used for your custom webpage but you can include in WordPress, Joomla or other CMS systems.
-Is easy to use.
+It's easy to use.
 
 EXAMPLE OF USE:
 ========
