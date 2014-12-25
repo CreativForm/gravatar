@@ -23,8 +23,17 @@ $gravatar=new gravatar('example@yourmail.com', 'http://mydomain.com/image/DEFAUL
 
 GET IMAGE
 ========
+Standard approach:
 
     echo '<img src="'.$gravatar->image(400).'">';
+
+Access to secure image:
+
+    echo '<img src="'.$gravatar->image(400,true).'">';
+    
+Access to non-secure image with max rating:
+
+    echo '<img src="'.$gravatar->image(400,false,'r').'">';
     
 GET QR CODE
 ========
