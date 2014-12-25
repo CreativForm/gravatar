@@ -29,9 +29,9 @@ class gravatar
 		
 		echo $gravatar->image(400);
 	*/
-	public function image($size=false)
+	public function image($size=false,$secure=false,$max_rating=NULL)
 	{
-		$url=$this->__get_url($this->__generate_image($size));
+		$url=$this->__get_url($this->__generate_image($size,$secure=false,$max_rating=NULL));
 		if($url!==false)
 			return $url;
 		else
