@@ -9,7 +9,7 @@ EXAMPLE OF USE:
 ========
 Gravatar use your email address to recognize unique avatar. Like default you can give default image to gravatar if your profile don't have image or is your image only for adults.
 
-   $gravatar=new gravatar('example@yourmail.com', 'http://mydomain.com/image/DEFAULT-IMAGE.jpg');
+    $gravatar=new gravatar('example@yourmail.com', 'http://mydomain.com/image/DEFAULT-IMAGE.jpg');
 	
 	$gravatar->image($image_size);		// Return image url
 	$gravatar->QRcode($image_size);	    // Return QR Code url
@@ -20,7 +20,7 @@ Gravatar use your email address to recognize unique avatar. Like default you can
 SETUP AND LOAD YOUR GRAVATAR WITH EXAMPLE
 ========
 
-    $gravatar=new gravatar('creativform@gmail.com', 'http://creativform.com/www.creativform.com.jpg');
+    $gravatar=new gravatar('example@yourmail.com', 'http://creativform.com/www.creativform.com.jpg');
 
 GET IMAGE
 ========
