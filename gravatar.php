@@ -12,10 +12,10 @@
 	$gravatar=new gravatar('example@gmail.com', 'http://mydomain.com/image/no-image.jpg');
 	
 	echo $gravatar->image(200);		// Get image
-	echo $gravatar->QRcode(400);    	// Get QR Code
-	echo $gravatar->vCard();              // Get VCF/vCard
-	$json=$gravatar->json(); 		  // return objects
-	echo $gravatar->xml(); 			  // return xml data
+	echo $gravatar->QRcode(400);	// Get QR Code
+	echo $gravatar->vCard();		// Get VCF/vCard
+	$json=$gravatar->json(); 		// return objects
+	echo $gravatar->xml(); 			// return xml data
 */
 class gravatar
 {
@@ -101,10 +101,14 @@ class gravatar
 	}
 /*------------------------------------------------------------------------------*/
 	// generate safe URL for image
-	protected function __generate_image($size){
+	protected function __generate_image($size,$max_rating=NULL,$secure=false){
+		if(in_array($max_rating, array('g','pg','r','x'))) $gets[]='r='.trim($max_rating);
 		if(!empty($this->default)) $gets[]='d='.urlencode($this->default);
 		if(is_float($size) || is_numeric($size)) $gets[]='s='.$size;
-		$host='http://www.gravatar.com/avatar/';
+		if($secure===true)
+			$host='https://secure.gravatar.com/avatar/';
+		else
+			$host='http://www.gravatar.com/avatar/';
 		return $host.$this->email.(count($gets)>0?'?'.join('&',$gets):'');
 	}
 	// generate safe URL for QR code
@@ -144,11 +148,13 @@ class gravatar
 			return (($retcode===200)?$url:false);
 		} else return false;
 	}
+	// constructions
 	function __construct($email=false, $default=false)
 	{
 		$this->email	= md5(strtolower(trim($email)));
 		$this->default	= trim($default);
 	}
+	// clear all data
 	function __destruct()
 	{
 		$this->email=$this->default=NULL;
