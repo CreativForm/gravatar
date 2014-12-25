@@ -26,8 +26,12 @@ class gravatar
 		GET GRAVATAR IMAGE
 		----------------------------
 		$gravatar=new gravatar('example@gmail.com', 'http://mydomain.com/image/no-image.jpg');
-		
+		// Example1: non-secure avatar
 		echo $gravatar->image(400);
+		// Example2: secure avatar
+		echo $gravatar->image(400, true); //true - secure, false - non secure (bool)
+		// Example3: non-secure avatar with maximum rating
+		echo $gravatar->image(400, false, 'r'); // The maximum rating to use for avatars ('g', 'pg', 'r', 'x')
 	*/
 	public function image($size=false,$secure=false,$max_rating=NULL)
 	{
