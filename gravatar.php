@@ -101,7 +101,7 @@ class gravatar
 	}
 /*------------------------------------------------------------------------------*/
 	// generate safe URL for image
-	protected function __generate_image($size,$max_rating=NULL,$secure=false){
+	protected function __generate_image($size,$secure=false,$max_rating=NULL){
 		if(in_array($max_rating, array('g','pg','r','x'))) $gets[]='r='.trim($max_rating);
 		if(!empty($this->default)) $gets[]='d='.urlencode($this->default);
 		if(is_float($size) || is_numeric($size)) $gets[]='s='.$size;
