@@ -4,7 +4,7 @@
  * created: 12/24/2014 10:00 (EST)
  * Copyright 2014 CreativForm.com
  * Created by: Ivijan-Stefan Stipic (creativform@gmail.com)
- * Licensed under MIT (http://creativform.com/MIT-License)
+ * Licensed under MIT (http://creativform.com/MIT-License.txt)
 ***********************************************************/
 /*
 	EXAMPLE:
